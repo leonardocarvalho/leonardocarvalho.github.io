@@ -684,6 +684,428 @@
             background: #059669;
         }
 
+        /* Event Modal Styles */
+        .event-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .event-modal.show {
+            display: flex;
+        }
+
+        .modal-content {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 24px;
+            min-width: 400px;
+            max-width: 500px;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .modal-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #f1f5f9;
+            margin: 0;
+        }
+
+        .close-modal {
+            background: none;
+            border: none;
+            color: #94a3b8;
+            font-size: 24px;
+            cursor: pointer;
+            padding: 0;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+        }
+
+        .close-modal:hover {
+            background: #334155;
+            color: #e2e8f0;
+        }
+
+        .event-options {
+            display: grid;
+            gap: 12px;
+        }
+
+        .event-option {
+            background: #0f172a;
+            border: 1px solid #334155;
+            border-radius: 8px;
+            padding: 16px;
+            color: #e2e8f0;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-align: left;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .event-option:hover {
+            background: #334155;
+            border-color: #475569;
+        }
+
+        .event-option .option-title {
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .event-option .option-description {
+            font-size: 12px;
+            color: #94a3b8;
+        }
+
+        /* Form Modal Styles */
+        .form-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1001;
+        }
+
+        .form-modal.show {
+            display: flex;
+        }
+
+        .form-content {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 24px;
+            min-width: 500px;
+            max-width: 600px;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .form-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+            border-bottom: 1px solid #334155;
+            padding-bottom: 16px;
+        }
+
+        .form-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #f1f5f9;
+            margin: 0;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            display: block;
+            color: #e2e8f0;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .form-input,
+        .form-select,
+        .form-textarea {
+            width: 100%;
+            background: #0f172a;
+            border: 1px solid #334155;
+            border-radius: 6px;
+            padding: 12px;
+            color: #e2e8f0;
+            font-size: 14px;
+            transition: border-color 0.2s ease;
+        }
+
+        .form-input:focus,
+        .form-select:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: #0891b2;
+        }
+
+        .form-textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        .form-actions {
+            display: flex;
+            gap: 12px;
+            justify-content: flex-end;
+            margin-top: 24px;
+            padding-top: 16px;
+            border-top: 1px solid #334155;
+        }
+
+        .form-btn {
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: 1px solid;
+        }
+
+        .form-btn-primary {
+            background: #0891b2;
+            border-color: #0891b2;
+            color: white;
+        }
+
+        .form-btn-primary:hover {
+            background: #0e7490;
+            border-color: #0e7490;
+        }
+
+        .form-btn-secondary {
+            background: #334155;
+            border-color: #475569;
+            color: #e2e8f0;
+        }
+
+        .form-btn-secondary:hover {
+            background: #475569;
+        }
+
+        /* PSE Rating Styles */
+        .pse-rating {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .pse-option {
+            width: 40px;
+            height: 40px;
+            border: 2px solid #334155;
+            border-radius: 6px;
+            background: #0f172a;
+            color: #e2e8f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            opacity: 0.6;
+        }
+
+        .pse-option:hover {
+            border-color: #0891b2;
+            background: #1e293b;
+        }
+
+        .pse-option.selected {
+            border-color: #0891b2;
+            color: white;
+            box-shadow: 0 0 8px rgba(8, 145, 178, 0.4);
+            opacity: 1;
+        }
+
+        /* PSE Color Gradient */
+        .pse-option[data-value="1"] {
+            background: #22c55e;
+            border-color: #22c55e;
+        }
+
+        .pse-option[data-value="2"] {
+            background: #65d961;
+            border-color: #65d961;
+        }
+
+        .pse-option[data-value="3"] {
+            background: #a3e635;
+            border-color: #a3e635;
+        }
+
+        .pse-option[data-value="4"] {
+            background: #eab308;
+            border-color: #eab308;
+        }
+
+        .pse-option[data-value="5"] {
+            background: #f59e0b;
+            border-color: #f59e0b;
+        }
+
+        .pse-option[data-value="6"] {
+            background: #f97316;
+            border-color: #f97316;
+        }
+
+        .pse-option[data-value="7"] {
+            background: #ef4444;
+            border-color: #ef4444;
+        }
+
+        .pse-option[data-value="8"] {
+            background: #dc2626;
+            border-color: #dc2626;
+        }
+
+        .pse-option[data-value="9"] {
+            background: #b91c1c;
+            border-color: #b91c1c;
+        }
+
+        .pse-option[data-value="10"] {
+            background: #991b1b;
+            border-color: #991b1b;
+        }
+
+        .pse-option[data-value="1"].selected {
+            background: #16a34a;
+            border-color: #16a34a;
+        }
+
+        .pse-option[data-value="2"].selected {
+            background: #4ade80;
+            border-color: #4ade80;
+        }
+
+        .pse-option[data-value="3"].selected {
+            background: #84cc16;
+            border-color: #84cc16;
+        }
+
+        .pse-option[data-value="4"].selected {
+            background: #ca8a04;
+            border-color: #ca8a04;
+        }
+
+        .pse-option[data-value="5"].selected {
+            background: #d97706;
+            border-color: #d97706;
+        }
+
+        .pse-option[data-value="6"].selected {
+            background: #ea580c;
+            border-color: #ea580c;
+        }
+
+        .pse-option[data-value="7"].selected {
+            background: #dc2626;
+            border-color: #dc2626;
+        }
+
+        .pse-option[data-value="8"].selected {
+            background: #b91c1c;
+            border-color: #b91c1c;
+        }
+
+        .pse-option[data-value="9"].selected {
+            background: #991b1b;
+            border-color: #991b1b;
+        }
+
+        .pse-option[data-value="10"].selected {
+            background: #7f1d1d;
+            border-color: #7f1d1d;
+        }
+
+        /* Toggle Switch Styles */
+        .toggle-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #334155;
+        }
+
+        .toggle-container:last-child {
+            border-bottom: none;
+        }
+
+        .toggle-label {
+            font-size: 14px;
+            color: #e2e8f0;
+            font-weight: 500;
+        }
+
+        .toggle-switch {
+            position: relative;
+            width: 48px;
+            height: 24px;
+            background: #334155;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        .toggle-switch.active {
+            background: #0891b2;
+        }
+
+        .toggle-slider {
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 20px;
+            height: 20px;
+            background: white;
+            border-radius: 50%;
+            transition: transform 0.2s ease;
+        }
+
+        .toggle-switch.active .toggle-slider {
+            transform: translateX(24px);
+        }
+
+        /* Form Section Styles */
+        .form-section {
+            margin-bottom: 32px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid #334155;
+        }
+
+        .form-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        .form-section-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #f1f5f9;
+            margin-bottom: 20px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #475569;
+        }
+
 
         .btn {
             background: #0f172a;
@@ -980,7 +1402,7 @@
                     <h2 class="current-month" id="currentMonth">Janeiro 2025</h2>
                     <button class="month-nav-btn" onclick="changeMonth(1)">›</button>
                 </div>
-                
+
                 <div class="calendar-grid">
                     <div class="weekdays">
                         <div class="weekday">Dom</div>
@@ -1005,6 +1427,260 @@
             </div>
         </div>
 
+        <!-- Event Modal -->
+        <div class="event-modal" id="eventModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Adicionar evento - <span id="modalDate"></span></h3>
+                    <button class="close-modal" onclick="closeEventModal()">&times;</button>
+                </div>
+                <div class="event-options">
+                    <button class="event-option" onclick="alert('Ainda não disponível')">
+                        <div class="option-title">Jogo</div>
+                        <div class="option-description">Partida da Premier League</div>
+                    </button>
+                    <button class="event-option" onclick="addEvent('coleta-pre', 'Coleta pré-treino')">
+                        <div class="option-title">Coleta pré-treino</div>
+                        <div class="option-description">Coleta de dados antes do treinamento</div>
+                    </button>
+                    <button class="event-option" onclick="openColetaPosForm()">
+                        <div class="option-title">Coleta pós-treino</div>
+                        <div class="option-description">Coleta de dados após o treinamento</div>
+                    </button>
+                    <button class="event-option" onclick="alert('Ainda não disponível')">
+                        <div class="option-title">Avaliação</div>
+                        <div class="option-description">Avaliação de desempenho</div>
+                    </button>
+                    <button class="event-option" onclick="viewDayEvents()"
+                        style="background: #334155; border-color: #475569;">
+                        <div class="option-title">Ver eventos do dia</div>
+                        <div class="option-description">Visualizar eventos existentes</div>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Game Form Modal -->
+        <div class="form-modal" id="gameModal">
+            <div class="form-content">
+                <div class="form-header">
+                    <h3 class="form-title">Partida - <span id="gameDate"></span></h3>
+                    <button class="close-modal" onclick="closeGameForm()">&times;</button>
+                </div>
+                <form id="gameForm">
+                    <div class="form-group">
+                        <label class="form-label" for="gameOpponent">Adversário</label>
+                        <select class="form-select" id="gameOpponent" required>
+                            <option value="">Selecione o adversário</option>
+                            <option value="Brighton">Brighton</option>
+                            <option value="Chelsea">Chelsea</option>
+                            <option value="Man City">Man City</option>
+                            <option value="Liverpool">Liverpool</option>
+                            <option value="Tottenham">Tottenham</option>
+                            <option value="Man United">Man United</option>
+                            <option value="Newcastle">Newcastle</option>
+                            <option value="Wolves">Wolves</option>
+                            <option value="West Ham">West Ham</option>
+                            <option value="Fulham">Fulham</option>
+                            <option value="Crystal Palace">Crystal Palace</option>
+                            <option value="Ipswich">Ipswich</option>
+                            <option value="Aston Villa">Aston Villa</option>
+                            <option value="Bournemouth">Bournemouth</option>
+                            <option value="Brentford">Brentford</option>
+                            <option value="Everton">Everton</option>
+                            <option value="Leicester">Leicester</option>
+                            <option value="Nottingham Forest">Nottingham Forest</option>
+                            <option value="Southampton">Southampton</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="gameTime">Horário</label>
+                        <input type="time" class="form-input" id="gameTime" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="gameVenue">Local</label>
+                        <select class="form-select" id="gameVenue" required>
+                            <option value="">Selecione o local</option>
+                            <option value="Emirates Stadium">Emirates Stadium (Casa)</option>
+                            <option value="away">Fora de casa</option>
+                        </select>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="form-btn form-btn-secondary"
+                            onclick="closeGameForm()">Cancelar</button>
+                        <button type="submit" class="form-btn form-btn-primary">Salvar Partida</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Coleta Pós-treino Form Modal -->
+        <div class="form-modal" id="coletaPosModal">
+            <div class="form-content">
+                <div class="form-header">
+                    <h3 class="form-title">Coleta Pós-treino - <span id="coletaPosDate"></span></h3>
+                    <button class="close-modal" onclick="closeColetaPosForm()">&times;</button>
+                </div>
+                <form id="coletaPosForm">
+                    <!-- Carga de treino Clube -->
+                    <div class="form-section">
+                        <h4 class="form-section-title">Carga de treino Clube</h4>
+                        <div class="form-group">
+                            <label class="form-label">PSE (1-10)</label>
+                            <div class="pse-rating" id="pseClube">
+                                <div class="pse-option" data-value="1">1</div>
+                                <div class="pse-option" data-value="2">2</div>
+                                <div class="pse-option" data-value="3">3</div>
+                                <div class="pse-option" data-value="4">4</div>
+                                <div class="pse-option" data-value="5">5</div>
+                                <div class="pse-option" data-value="6">6</div>
+                                <div class="pse-option" data-value="7">7</div>
+                                <div class="pse-option" data-value="8">8</div>
+                                <div class="pse-option" data-value="9">9</div>
+                                <div class="pse-option" data-value="10">10</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="duracaoClube">Duração (minutos)</label>
+                            <input type="number" class="form-input" id="duracaoClube" placeholder="Duração em minutos"
+                                min="0">
+                        </div>
+                    </div>
+
+                    <!-- Carga de treino em casa -->
+                    <div class="form-section">
+                        <h4 class="form-section-title">Carga de treino em casa</h4>
+                        <div class="form-group">
+                            <label class="form-label">PSE (1-10)</label>
+                            <div class="pse-rating" id="pseCasa">
+                                <div class="pse-option" data-value="1">1</div>
+                                <div class="pse-option" data-value="2">2</div>
+                                <div class="pse-option" data-value="3">3</div>
+                                <div class="pse-option" data-value="4">4</div>
+                                <div class="pse-option" data-value="5">5</div>
+                                <div class="pse-option" data-value="6">6</div>
+                                <div class="pse-option" data-value="7">7</div>
+                                <div class="pse-option" data-value="8">8</div>
+                                <div class="pse-option" data-value="9">9</div>
+                                <div class="pse-option" data-value="10">10</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="duracaoCasa">Duração (minutos)</label>
+                            <input type="number" class="form-input" id="duracaoCasa" placeholder="Duração em minutos"
+                                min="0">
+                        </div>
+                    </div>
+
+                    <!-- Categorias de treino -->
+                    <div class="form-section">
+                        <h4 class="form-section-title">Categorias de treino</h4>
+                        <div class="toggle-container">
+                            <span class="toggle-label">Força membros superiores</span>
+                            <div class="toggle-switch" data-category="forca-superiores">
+                                <div class="toggle-slider"></div>
+                            </div>
+                        </div>
+                        <div class="toggle-container">
+                            <span class="toggle-label">Força membros inferiores</span>
+                            <div class="toggle-switch" data-category="forca-inferiores">
+                                <div class="toggle-slider"></div>
+                            </div>
+                        </div>
+                        <div class="toggle-container">
+                            <span class="toggle-label">Controle motor</span>
+                            <div class="toggle-switch" data-category="controle-motor">
+                                <div class="toggle-slider"></div>
+                            </div>
+                        </div>
+                        <div class="toggle-container">
+                            <span class="toggle-label">Recovery</span>
+                            <div class="toggle-switch" data-category="recovery">
+                                <div class="toggle-slider"></div>
+                            </div>
+                        </div>
+                        <div class="toggle-container">
+                            <span class="toggle-label">Isométrico</span>
+                            <div class="toggle-switch" data-category="isometrico">
+                                <div class="toggle-slider"></div>
+                            </div>
+                        </div>
+                        <div class="toggle-container">
+                            <span class="toggle-label">Estabilidade central</span>
+                            <div class="toggle-switch" data-category="estabilidade-central">
+                                <div class="toggle-slider"></div>
+                            </div>
+                        </div>
+                        <div class="toggle-container">
+                            <span class="toggle-label">Estabilidade quadril</span>
+                            <div class="toggle-switch" data-category="estabilidade-quadril">
+                                <div class="toggle-slider"></div>
+                            </div>
+                        </div>
+                        <div class="toggle-container">
+                            <span class="toggle-label">Complexo tornozelo pé</span>
+                            <div class="toggle-switch" data-category="complexo-tornozelo">
+                                <div class="toggle-slider"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="form-btn form-btn-secondary"
+                            onclick="closeColetaPosForm()">Cancelar</button>
+                        <button type="button" class="form-btn form-btn-primary" onclick="saveColetaPosForm()">Salvar
+                            Coleta</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Avaliação Form Modal -->
+        <div class="form-modal" id="avaliacaoModal">
+            <div class="form-content">
+                <div class="form-header">
+                    <h3 class="form-title">Avaliação - <span id="avaliacaoDate"></span></h3>
+                    <button class="close-modal" onclick="closeAvaliacaoForm()">&times;</button>
+                </div>
+                <form id="avaliacaoForm">
+                    <div class="form-group">
+                        <label class="form-label" for="avaliacaoTipo">Tipo de Avaliação</label>
+                        <select class="form-select" id="avaliacaoTipo" required>
+                            <option value="">Selecione o tipo</option>
+                            <option value="fisica">Avaliação Física</option>
+                            <option value="tecnica">Avaliação Técnica</option>
+                            <option value="psicologica">Avaliação Psicológica</option>
+                            <option value="nutricional">Avaliação Nutricional</option>
+                            <option value="medica">Avaliação Médica</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="avaliacaoHorario">Horário</label>
+                        <input type="time" class="form-input" id="avaliacaoHorario" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="avaliacaoResponsavel">Responsável</label>
+                        <input type="text" class="form-input" id="avaliacaoResponsavel"
+                            placeholder="Nome do profissional responsável">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="avaliacaoLocal">Local</label>
+                        <input type="text" class="form-input" id="avaliacaoLocal" placeholder="Local da avaliação">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="avaliacaoObservacoes">Observações</label>
+                        <textarea class="form-textarea" id="avaliacaoObservacoes"
+                            placeholder="Observações adicionais sobre a avaliação"></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="form-btn form-btn-secondary"
+                            onclick="closeAvaliacaoForm()">Cancelar</button>
+                        <button type="submit" class="form-btn form-btn-primary">Salvar Avaliação</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
         <script>
             function switchTab(tabName) {
                 // Remove active class from all tabs
@@ -1012,8 +1688,14 @@
                     button.classList.remove('active');
                 });
 
-                // Add active class to clicked tab
-                event.target.classList.add('active');
+                // Add active class to the correct tab button
+                const targetButton = document.querySelector(`[onclick="switchTab('${tabName}')"]`);
+                if (targetButton) {
+                    targetButton.classList.add('active');
+                } else if (event && event.target) {
+                    // Fallback for when called via click event
+                    event.target.classList.add('active');
+                }
 
                 // Hide all tab contents
                 document.querySelectorAll('.tab-content').forEach(content => {
@@ -1024,7 +1706,7 @@
                 const selectedTab = document.getElementById(tabName + '-content');
                 if (selectedTab) {
                     selectedTab.classList.add('active');
-                    
+
                     // Initialize calendar if switching to calendar tab
                     if (tabName === 'calendario') {
                         setTimeout(initializeCalendar, 100);
@@ -1176,16 +1858,16 @@
                 const lastDay = new Date(year, month + 1, 0);
                 const firstDayOfWeek = firstDay.getDay();
                 const daysInMonth = lastDay.getDate();
-                
+
                 // Update month display
                 document.getElementById('currentMonth').textContent = `${monthNames[month]} ${year}`;
-                
+
                 // Clear previous days
                 const calendarDays = document.getElementById('calendarDays');
                 if (!calendarDays) return;
-                
+
                 calendarDays.innerHTML = '';
-                
+
                 // Add empty cells for days before the first day of the month
                 for (let i = 0; i < firstDayOfWeek; i++) {
                     const prevMonthDay = new Date(year, month, 0 - (firstDayOfWeek - 1 - i));
@@ -1194,23 +1876,23 @@
                     dayElement.textContent = prevMonthDay.getDate();
                     calendarDays.appendChild(dayElement);
                 }
-                
+
                 // Add days of the current month
                 const today = new Date();
                 for (let day = 1; day <= daysInMonth; day++) {
                     const dayElement = document.createElement('div');
                     dayElement.className = 'calendar-day';
-                    
+
                     // Create day number
                     const dayNumber = document.createElement('div');
                     dayNumber.className = 'calendar-day-number';
                     dayNumber.textContent = day;
                     dayElement.appendChild(dayNumber);
-                    
+
                     // Create events container
                     const eventsContainer = document.createElement('div');
                     eventsContainer.className = 'calendar-events';
-                    
+
                     // Check for events on this day
                     const dateKey = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
                     if (events[dateKey]) {
@@ -1221,19 +1903,24 @@
                             eventsContainer.appendChild(eventElement);
                         });
                     }
-                    
+
                     dayElement.appendChild(eventsContainer);
-                    
+
                     // Check if this is today
-                    if (year === today.getFullYear() && 
-                        month === today.getMonth() && 
+                    if (year === today.getFullYear() &&
+                        month === today.getMonth() &&
                         day === today.getDate()) {
                         dayElement.classList.add('today');
                     }
-                    
+
+                    // Add click event listener for adding events
+                    dayElement.addEventListener('click', function () {
+                        openEventModal(year, month, day);
+                    });
+
                     calendarDays.appendChild(dayElement);
                 }
-                
+
                 // Add days from next month to fill the grid
                 const totalCells = calendarDays.children.length;
                 const cellsNeeded = Math.ceil(totalCells / 7) * 7;
@@ -1260,6 +1947,209 @@
                     const team = this.textContent;
                     alert(`Visualizando detalhes da partida para ${team}`);
                 });
+            });
+
+            // Event modal functionality
+            let selectedDate = null;
+
+            function openEventModal(year, month, day) {
+                selectedDate = { year, month, day };
+                const modal = document.getElementById('eventModal');
+                const dateStr = `${day}/${month + 1}/${year}`;
+                document.getElementById('modalDate').textContent = dateStr;
+                modal.classList.add('show');
+            }
+
+            function closeEventModal() {
+                const modal = document.getElementById('eventModal');
+                modal.classList.remove('show');
+                selectedDate = null;
+            }
+
+            function addEvent(eventType, eventTitle) {
+                if (!selectedDate) return;
+
+                const { year, month, day } = selectedDate;
+                const dateKey = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+
+                if (!events[dateKey]) {
+                    events[dateKey] = [];
+                }
+
+                events[dateKey].push({ type: eventType, title: eventTitle });
+
+                // Refresh the calendar to show the new event
+                generateCalendar(year, month);
+
+                // Close the modal
+                closeEventModal();
+            }
+
+            function viewDayEvents() {
+                alert('Ainda não disponível');
+            }
+
+            function openGameForm() {
+                if (!selectedDate) return;
+
+                const { year, month, day } = selectedDate;
+                const dateStr = `${day}/${month + 1}/${year}`;
+                document.getElementById('gameDate').textContent = dateStr;
+
+                // Close event modal and open form modal
+                closeEventModal();
+                document.getElementById('gameModal').classList.add('show');
+            }
+
+            function closeGameForm() {
+                document.getElementById('gameModal').classList.remove('show');
+                document.getElementById('gameForm').reset();
+            }
+
+            function openColetaPosForm() {
+                if (!selectedDate) return;
+
+                const { year, month, day } = selectedDate;
+                const dateStr = `${day}/${month + 1}/${year}`;
+                document.getElementById('coletaPosDate').textContent = dateStr;
+
+                // Close event modal and open form modal
+                closeEventModal();
+                document.getElementById('coletaPosModal').classList.add('show');
+
+                // Initialize form functionality
+                selectedDate = { year, month, day };
+                initializeColetaPosForm();
+            }
+
+            function closeColetaPosForm() {
+                document.getElementById('coletaPosModal').classList.remove('show');
+                document.getElementById('coletaPosForm').reset();
+
+                // Reset PSE selections
+                document.querySelectorAll('.pse-option').forEach(option => {
+                    option.classList.remove('selected');
+                });
+
+                // Reset toggles
+                document.querySelectorAll('.toggle-switch').forEach(toggle => {
+                    toggle.classList.remove('active');
+                });
+                selectedDate = null;
+            }
+
+            function initializeColetaPosForm(year, month, day) {
+                // PSE rating functionality
+                document.querySelectorAll('.pse-rating').forEach(container => {
+                    const options = container.querySelectorAll('.pse-option');
+                    options.forEach(option => {
+                        option.addEventListener('click', function () {
+                            // Remove selected class from all options in this container
+                            options.forEach(opt => opt.classList.remove('selected'));
+                            // Add selected class to clicked option
+                            this.classList.add('selected');
+                        });
+                    });
+                });
+
+                // Toggle switches functionality
+                document.querySelectorAll('.toggle-switch').forEach(toggle => {
+                    toggle.addEventListener('click', function () {
+                        this.classList.toggle('active');
+                    });
+                });
+            }
+
+            function openAvaliacaoForm() {
+                if (!selectedDate) return;
+
+                const { year, month, day } = selectedDate;
+                const dateStr = `${day}/${month + 1}/${year}`;
+                document.getElementById('avaliacaoDate').textContent = dateStr;
+
+                // Close event modal and open form modal
+                closeEventModal();
+                document.getElementById('avaliacaoModal').classList.add('show');
+            }
+
+            function closeAvaliacaoForm() {
+                document.getElementById('avaliacaoModal').classList.remove('show');
+                document.getElementById('avaliacaoForm').reset();
+            }
+
+            // Handle game form submission
+            document.getElementById('gameForm').addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                if (!selectedDate) return;
+
+                const opponent = document.getElementById('gameOpponent').value;
+
+                // Create event title similar to existing ones (vs TeamName)
+                const eventTitle = `vs ${opponent}`;
+
+                // Add the event
+                const { year, month, day } = selectedDate;
+                addEvent('game', eventTitle);
+
+                // Close form
+                closeGameForm();
+            });
+
+            function saveColetaPosForm() {
+                if (!selectedDate) return;
+
+                // Add the event
+                const { year, month, day } = selectedDate;
+                addEvent('coleta-pos', 'Coleta pós-treino');
+
+                // Close form
+                closeColetaPosForm();
+            }
+
+            // Handle avaliação form submission
+            document.getElementById('avaliacaoForm').addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                if (!selectedDate) return;
+
+                const formData = new FormData(this);
+                const tipo = document.getElementById('avaliacaoTipo').value;
+                const horario = document.getElementById('avaliacaoHorario').value;
+                const responsavel = document.getElementById('avaliacaoResponsavel').value;
+                const local = document.getElementById('avaliacaoLocal').value;
+                const observacoes = document.getElementById('avaliacaoObservacoes').value;
+
+                // Create event title based on form data
+                let eventTitle = `Avaliação ${tipo.charAt(0).toUpperCase() + tipo.slice(1)}`;
+                if (horario) {
+                    eventTitle += ` - ${horario}`;
+                }
+
+                // Add the event
+                const { year, month, day } = selectedDate;
+                addEvent('avaliacao', eventTitle);
+
+                // Close form
+                closeAvaliacaoForm();
+            });
+
+            // Close modal when clicking outside
+            document.addEventListener('click', function (e) {
+                const eventModal = document.getElementById('eventModal');
+                const gameModal = document.getElementById('gameModal');
+                const coletaPosModal = document.getElementById('coletaPosModal');
+                const avaliacaoModal = document.getElementById('avaliacaoModal');
+
+                if (e.target === eventModal) {
+                    closeEventModal();
+                } else if (e.target === gameModal) {
+                    closeGameForm();
+                } else if (e.target === coletaPosModal) {
+                    closeColetaPosForm();
+                } else if (e.target === avaliacaoModal) {
+                    closeAvaliacaoForm();
+                }
             });
         </script>
 </body>
