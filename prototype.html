@@ -54,6 +54,7 @@
         .header-content {
             display: flex;
             align-items: center;
+            justify-content: space-between;
         }
 
         .header-text h1 {
@@ -77,6 +78,16 @@
             max-width: 600px;
             position: relative;
             padding: 0 40px;
+        }
+
+        .header-logo {
+            margin-left: 20px;
+        }
+
+        .header-logo img {
+            height: 60px;
+            width: auto;
+            object-fit: contain;
         }
 
         /* Sidebar Components */
@@ -1720,6 +1731,221 @@
             font-size: 14px;
         }
 
+        /* Edit Mode Styles */
+        .session-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .edit-link {
+            color: #3b82f6;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            text-transform: lowercase;
+        }
+
+        .edit-link:hover {
+            color: #2563eb;
+            text-decoration: underline;
+        }
+
+        .edit-link.editing {
+            color: #ef4444;
+        }
+
+        .edit-link.editing:hover {
+            color: #dc2626;
+        }
+
+        .table-actions {
+            display: flex;
+            gap: 12px;
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid #334155;
+        }
+
+        .add-row-btn,
+        .save-changes-btn,
+        .cancel-changes-btn {
+            background: #16a34a;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .add-row-btn:hover {
+            background: #15803d;
+        }
+
+        .save-changes-btn {
+            background: #3b82f6;
+        }
+
+        .save-changes-btn:hover {
+            background: #2563eb;
+        }
+
+        .cancel-changes-btn {
+            background: #6b7280;
+        }
+
+        .cancel-changes-btn:hover {
+            background: #4b5563;
+        }
+
+        .delete-row-btn {
+            background: #ef4444;
+            color: white;
+            border: none;
+            padding: 4px 8px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+
+        .delete-row-btn:hover {
+            background: #dc2626;
+        }
+
+        .action-column {
+            width: 80px;
+            text-align: center;
+        }
+
+        .editable-cell {
+            background: #0f172a;
+            border: 1px solid #334155;
+            border-radius: 4px;
+            padding: 6px;
+            width: 100%;
+            color: #f1f5f9;
+            font-size: 14px;
+        }
+
+        .editable-cell:focus {
+            outline: none;
+            border-color: #3b82f6;
+            background: #1e293b;
+        }
+
+        .exercise-dropdown {
+            background: #0f172a;
+            border: 1px solid #334155;
+            border-radius: 4px;
+            padding: 6px;
+            width: 100%;
+            color: #f1f5f9;
+            font-size: 14px;
+        }
+
+        .exercise-dropdown:focus {
+            outline: none;
+            border-color: #3b82f6;
+            background: #1e293b;
+        }
+
+        /* Modal Styles */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 8px;
+            padding: 24px;
+            max-width: 500px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .modal-content h3 {
+            color: #f1f5f9;
+            margin-bottom: 16px;
+            font-size: 18px;
+        }
+
+        .modal-content p {
+            color: #cbd5e1;
+            margin-bottom: 16px;
+            font-size: 14px;
+        }
+
+        .modal-content textarea {
+            width: 100%;
+            background: #0f172a;
+            border: 1px solid #334155;
+            border-radius: 6px;
+            padding: 12px;
+            color: #f1f5f9;
+            font-size: 14px;
+            resize: vertical;
+            min-height: 100px;
+            margin-bottom: 20px;
+        }
+
+        .modal-content textarea:focus {
+            outline: none;
+            border-color: #3b82f6;
+        }
+
+        .modal-content textarea::placeholder {
+            color: #94a3b8;
+        }
+
+        .modal-actions {
+            display: flex;
+            gap: 12px;
+            justify-content: flex-end;
+        }
+
+        .modal-btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .modal-btn.cancel {
+            background: #6b7280;
+            color: white;
+        }
+
+        .modal-btn.cancel:hover {
+            background: #4b5563;
+        }
+
+        .modal-btn.confirm {
+            background: #3b82f6;
+            color: white;
+        }
+
+        .modal-btn.confirm:hover {
+            background: #2563eb;
+        }
+
         .session-controls {
             display: flex;
             justify-content: space-between;
@@ -2291,6 +2517,9 @@
                         <div class="timeline-label">Próximo</div>
                     </div>
                 </div>
+                <div class="header-logo">
+                    <img src="https://drive.google.com/thumbnail?id=1X3mCH4LDoHy7ZxECQbxorcWRhFn694XS" alt="Logo" />
+                </div>
             </div>
         </div>
 
@@ -2499,7 +2728,12 @@
 
                 <!-- Training Session Details -->
                 <div class="session-section">
-                    <h3 class="session-title">Detalhes da Sessão</h3>
+                    <h3 class="session-title">
+                        Detalhes da Sessão
+                        <a href="#" class="edit-link" onclick="toggleEditMode(); return false;">
+                            <span class="edit-text">editar</span>
+                        </a>
+                    </h3>
 
                     <!-- Session Info Header -->
                     <div class="session-info-header">
@@ -2529,6 +2763,7 @@
                                         <th>Repetições</th>
                                         <th>Carga Total</th>
                                         <th>Descanso</th>
+                                        <th class="action-column" style="display: none;">Ações</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -2539,6 +2774,9 @@
                                         <td>8</td>
                                         <td>120kg</td>
                                         <td>90s</td>
+                                        <td class="action-column" style="display: none;">
+                                            <button class="delete-row-btn" onclick="deleteRow(this)">🗑️</button>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td>Supino</td>
@@ -2547,6 +2785,9 @@
                                         <td>6</td>
                                         <td>80kg</td>
                                         <td>120s</td>
+                                        <td class="action-column" style="display: none;">
+                                            <button class="delete-row-btn" onclick="deleteRow(this)">🗑️</button>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td>Levantamento Terra</td>
@@ -2555,6 +2796,9 @@
                                         <td>5</td>
                                         <td>140kg</td>
                                         <td>180s</td>
+                                        <td class="action-column" style="display: none;">
+                                            <button class="delete-row-btn" onclick="deleteRow(this)">🗑️</button>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td>Salto Vertical</td>
@@ -2563,9 +2807,23 @@
                                         <td>5</td>
                                         <td>Peso corporal</td>
                                         <td>60s</td>
+                                        <td class="action-column" style="display: none;">
+                                            <button class="delete-row-btn" onclick="deleteRow(this)">🗑️</button>
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table>
+                            <div class="table-actions" style="display: none;">
+                                <button class="add-row-btn" onclick="addRow()">
+                                    <span>➕</span> Adicionar Exercício
+                                </button>
+                                <button class="save-changes-btn" onclick="saveChanges()">
+                                    <span>💾</span> Salvar Alterações
+                                </button>
+                                <button class="cancel-changes-btn" onclick="cancelEdit()">
+                                    <span>❌</span> Cancelar
+                                </button>
+                            </div>
                         </div>
 
                         <!-- Right Side Content -->
@@ -2954,7 +3212,7 @@
                     <!-- Dados de Sono -->
                     <div class="trend-card">
                         <div class="trend-header">
-                            <h3 class="trend-title">Dados de Sono</h3>
+                            <h3 class="trend-title">Sono e Sistema Autônomo</h3>
                             <div class="trend-period">Dados de sono - Últimos 7 dias</div>
                         </div>
                         <div class="trend-content">
@@ -4236,6 +4494,275 @@
             function openTrendsModal() {
                 // Show trends content in modal
                 switchTab('trends');
+            }
+
+            // Edit mode functionality
+            let isEditing = false;
+            let originalData = [];
+
+            const exerciseOptions = [
+                'Agachamento',
+                'Supino',
+                'Levantamento Terra',
+                'Salto Vertical',
+                'Corrida',
+                'Flexão',
+                'Burpee',
+                'Prancha',
+                'Afundo',
+                'Rosca Direta',
+                'Tríceps',
+                'Abdominais',
+                'Polichinelos',
+                'Mountain Climbers',
+                'Kettlebell Swing'
+            ];
+
+            function toggleEditMode() {
+                isEditing = !isEditing;
+                const editLink = document.querySelector('.edit-link');
+                const actionColumns = document.querySelectorAll('.action-column');
+                const tableActions = document.querySelector('.table-actions');
+
+                if (isEditing) {
+                    // Store original data
+                    storeOriginalData();
+
+                    // Change link appearance
+                    editLink.classList.add('editing');
+                    editLink.querySelector('.edit-text').textContent = 'cancelar';
+
+                    // Show action columns and table actions
+                    actionColumns.forEach(col => col.style.display = 'table-cell');
+                    tableActions.style.display = 'flex';
+
+                    // Make table cells editable
+                    makeTableEditable();
+                } else {
+                    // Restore original data
+                    restoreOriginalData();
+
+                    // Change link appearance
+                    editLink.classList.remove('editing');
+                    editLink.querySelector('.edit-text').textContent = 'editar';
+
+                    // Hide action columns and table actions
+                    actionColumns.forEach(col => col.style.display = 'none');
+                    tableActions.style.display = 'none';
+
+                    // Make table cells non-editable
+                    makeTableNonEditable();
+                }
+            }
+
+            function storeOriginalData() {
+                originalData = [];
+                const rows = document.querySelectorAll('.exercise-table tbody tr');
+                rows.forEach(row => {
+                    const cells = row.querySelectorAll('td:not(.action-column)');
+                    const rowData = [];
+                    cells.forEach(cell => {
+                        rowData.push(cell.textContent.trim());
+                    });
+                    originalData.push(rowData);
+                });
+            }
+
+            function restoreOriginalData() {
+                const tbody = document.querySelector('.exercise-table tbody');
+                tbody.innerHTML = '';
+
+                originalData.forEach(rowData => {
+                    const row = document.createElement('tr');
+                    rowData.forEach(cellData => {
+                        const cell = document.createElement('td');
+                        cell.textContent = cellData;
+                        row.appendChild(cell);
+                    });
+
+                    // Add action column
+                    const actionCell = document.createElement('td');
+                    actionCell.className = 'action-column';
+                    actionCell.style.display = 'none';
+                    actionCell.innerHTML = '<button class="delete-row-btn" onclick="deleteRow(this)">🗑️</button>';
+                    row.appendChild(actionCell);
+
+                    tbody.appendChild(row);
+                });
+            }
+
+            function makeTableEditable() {
+                const rows = document.querySelectorAll('.exercise-table tbody tr');
+                rows.forEach(row => {
+                    const cells = row.querySelectorAll('td:not(.action-column)');
+                    cells.forEach((cell, index) => {
+                        if (index === 0) { // Exercise column - dropdown
+                            const select = document.createElement('select');
+                            select.className = 'exercise-dropdown';
+
+                            exerciseOptions.forEach(option => {
+                                const optionElement = document.createElement('option');
+                                optionElement.value = option;
+                                optionElement.textContent = option;
+                                if (option === cell.textContent.trim()) {
+                                    optionElement.selected = true;
+                                }
+                                select.appendChild(optionElement);
+                            });
+
+                            cell.innerHTML = '';
+                            cell.appendChild(select);
+                        } else { // Other columns - input
+                            const input = document.createElement('input');
+                            input.className = 'editable-cell';
+                            input.value = cell.textContent.trim();
+                            input.type = 'text';
+
+                            cell.innerHTML = '';
+                            cell.appendChild(input);
+                        }
+                    });
+                });
+            }
+
+            function makeTableNonEditable() {
+                const rows = document.querySelectorAll('.exercise-table tbody tr');
+                rows.forEach(row => {
+                    const cells = row.querySelectorAll('td:not(.action-column)');
+                    cells.forEach(cell => {
+                        const input = cell.querySelector('input, select');
+                        if (input) {
+                            cell.textContent = input.value;
+                        }
+                    });
+                });
+            }
+
+            function addRow() {
+                const tbody = document.querySelector('.exercise-table tbody');
+                const row = document.createElement('tr');
+
+                // Create cells with default values
+                const cellData = ['Agachamento', 'Notas', '3', '8', '60kg', '90s'];
+                cellData.forEach((data, index) => {
+                    const cell = document.createElement('td');
+
+                    if (index === 0) { // Exercise column - dropdown
+                        const select = document.createElement('select');
+                        select.className = 'exercise-dropdown';
+
+                        exerciseOptions.forEach(option => {
+                            const optionElement = document.createElement('option');
+                            optionElement.value = option;
+                            optionElement.textContent = option;
+                            if (option === data) {
+                                optionElement.selected = true;
+                            }
+                            select.appendChild(optionElement);
+                        });
+
+                        cell.appendChild(select);
+                    } else { // Other columns - input
+                        const input = document.createElement('input');
+                        input.className = 'editable-cell';
+                        input.value = data;
+                        input.type = 'text';
+                        cell.appendChild(input);
+                    }
+
+                    row.appendChild(cell);
+                });
+
+                // Add action column
+                const actionCell = document.createElement('td');
+                actionCell.className = 'action-column';
+                actionCell.innerHTML = '<button class="delete-row-btn" onclick="deleteRow(this)">🗑️</button>';
+                row.appendChild(actionCell);
+
+                tbody.appendChild(row);
+            }
+
+            function deleteRow(button) {
+                const row = button.closest('tr');
+                row.remove();
+            }
+
+            function cancelEdit() {
+                toggleEditMode();
+            }
+
+            function saveChanges() {
+                // Show save confirmation modal
+                showSaveModal();
+            }
+
+            function showSaveModal() {
+                // Create modal HTML
+                const modalHTML = `
+                    <div class="modal-overlay" id="saveModal">
+                        <div class="modal-content">
+                            <h3>Confirmar Alterações</h3>
+                            <p>Por favor, explique o motivo das alterações no treino:</p>
+                            <textarea id="changeReason" placeholder="Descreva o motivo das alterações..." rows="4"></textarea>
+                            <div class="modal-actions">
+                                <button class="modal-btn cancel" onclick="closeSaveModal()">Cancelar</button>
+                                <button class="modal-btn confirm" onclick="confirmSave()">Confirmar</button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+
+                // Add modal to body
+                document.body.insertAdjacentHTML('beforeend', modalHTML);
+
+                // Focus on textarea
+                document.getElementById('changeReason').focus();
+            }
+
+            function closeSaveModal() {
+                const modal = document.getElementById('saveModal');
+                if (modal) {
+                    modal.remove();
+                }
+            }
+
+            function confirmSave() {
+                const reason = document.getElementById('changeReason').value.trim();
+
+                if (!reason) {
+                    alert('Por favor, forneça uma explicação para as alterações.');
+                    return;
+                }
+
+                // Save the changes by making cells non-editable first
+                makeTableNonEditable();
+
+                // Update the original data with current state
+                storeOriginalData();
+
+                // Exit edit mode
+                exitEditMode();
+
+                // Close modal
+                closeSaveModal();
+
+                // Show success message
+                alert('Alterações salvas com sucesso!\\nMotivo: ' + reason);
+            }
+
+            function exitEditMode() {
+                isEditing = false;
+                const editLink = document.querySelector('.edit-link');
+                const actionColumns = document.querySelectorAll('.action-column');
+                const tableActions = document.querySelector('.table-actions');
+
+                // Change link appearance
+                editLink.classList.remove('editing');
+                editLink.querySelector('.edit-text').textContent = 'editar';
+
+                // Hide action columns and table actions
+                actionColumns.forEach(col => col.style.display = 'none');
+                tableActions.style.display = 'none';
             }
         </script>
 </body>
