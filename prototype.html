@@ -1468,6 +1468,332 @@
             height: 100%;
         }
 
+        /* Session Tab Styles */
+        .session-container {
+            padding: 24px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .session-section {
+            margin-bottom: 32px;
+        }
+
+        .session-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #f1f5f9;
+            margin-bottom: 16px;
+        }
+
+        .session-info-header {
+            display: flex;
+            gap: 32px;
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 8px;
+            padding: 16px 20px;
+            margin-bottom: 24px;
+        }
+
+        .session-info-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .session-info-label {
+            font-size: 14px;
+            color: #94a3b8;
+            font-weight: 500;
+        }
+
+        .session-info-value {
+            font-size: 14px;
+            color: #f1f5f9;
+            font-weight: 600;
+        }
+
+        .schedule-table {
+            width: 100%;
+            max-width: 1000px;
+            table-layout: fixed;
+            border-collapse: collapse;
+            background: #1e293b;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .exercise-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #1e293b;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .schedule-table th,
+        .schedule-table td {
+            padding: 8px 4px;
+            text-align: left;
+            border-bottom: 1px solid #334155;
+            font-size: 12px;
+        }
+
+        .schedule-table th:first-child,
+        .schedule-table td:first-child {
+            width: 60px;
+        }
+
+        .schedule-table th:not(:first-child),
+        .schedule-table td:not(:first-child) {
+            width: calc((100% - 60px) / 7);
+        }
+
+        .exercise-table th,
+        .exercise-table td {
+            padding: 12px 16px;
+            text-align: left;
+            border-bottom: 1px solid #334155;
+        }
+
+        .schedule-table th,
+        .exercise-table th {
+            background: #0f172a;
+            color: #f1f5f9;
+            font-weight: 600;
+        }
+
+        .schedule-table td,
+        .exercise-table td {
+            color: #e2e8f0;
+        }
+
+        .period-label {
+            font-weight: 600;
+            color: #f1f5f9;
+        }
+
+        .schedule-cell {
+            text-align: center;
+            font-weight: 500;
+            color: #e2e8f0;
+            font-size: 11px;
+            line-height: 1.3;
+        }
+
+        .schedule-cell.club {
+            color: #10b981;
+        }
+
+        .schedule-cell.home {
+            color: #f59e0b;
+        }
+
+        .schedule-cell.rest {
+            color: #64748b;
+        }
+
+        .schedule-cell.game {
+            color: #3b82f6;
+        }
+
+        .schedule-table .team-logo {
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
+        }
+
+        .session-content {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 24px;
+            align-items: stretch;
+        }
+
+        .exercise-table-container {
+            overflow-x: auto;
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 8px;
+            padding: 20px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .session-right-content {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .session-insights-box {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .session-insights-box h4 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #f1f5f9;
+            margin-bottom: 12px;
+        }
+
+        .session-insights-box ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .session-insights-box li {
+            color: #cbd5e1;
+            font-size: 14px;
+            margin-bottom: 8px;
+            padding-left: 16px;
+            position: relative;
+        }
+
+        .session-insights-box li:before {
+            content: "•";
+            color: #f59e0b;
+            position: absolute;
+            left: 0;
+        }
+
+        .trends-link {
+            color: #3b82f6;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 500;
+            display: block;
+            margin-bottom: 12px;
+        }
+
+        .trends-link:hover {
+            color: #2563eb;
+            text-decoration: underline;
+        }
+
+        .exercise-videos {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .exercise-videos h4 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #f1f5f9;
+            margin-bottom: 12px;
+        }
+
+        .video-placeholder {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .video-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 8px;
+            background: #0f172a;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .video-item:hover {
+            background: #334155;
+        }
+
+        .video-thumbnail {
+            font-size: 20px;
+        }
+
+        .video-item span {
+            color: #cbd5e1;
+            font-size: 14px;
+        }
+
+        .session-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .session-stats {
+            display: flex;
+            gap: 32px;
+        }
+
+        .stat-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .stat-label {
+            color: #94a3b8;
+            font-size: 14px;
+        }
+
+        .stat-value {
+            color: #f1f5f9;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .session-buttons {
+            display: flex;
+            gap: 12px;
+        }
+
+        .session-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .start-btn {
+            background: #059669;
+            color: white;
+        }
+
+        .start-btn:hover {
+            background: #047857;
+        }
+
+        .end-btn {
+            background: #dc2626;
+            color: white;
+        }
+
+        .end-btn:hover {
+            background: #b91c1c;
+        }
+
+        .trends-btn {
+            background: #3b82f6;
+            color: white;
+        }
+
+        .trends-btn:hover {
+            background: #2563eb;
+        }
+
 
         .trend-card {
             background: #1e293b;
@@ -2121,9 +2447,180 @@
 
         <!-- Other Tab Contents -->
         <div class="tab-content" id="sessao-content">
-            <div class="empty-tab">
-                <h2>Sessão</h2>
-                <p>Conteúdo da sessão será implementado aqui.</p>
+            <div class="session-container">
+                <!-- Weekly Training Schedule -->
+                <div class="session-section">
+                    <h3 class="session-title">Semana 12</h3>
+                    <div class="weekly-schedule">
+                        <table class="schedule-table">
+                            <thead>
+                                <tr>
+                                    <th>Período</th>
+                                    <th>Segunda</th>
+                                    <th>Terça</th>
+                                    <th>Quarta</th>
+                                    <th>Quinta</th>
+                                    <th>Sexta</th>
+                                    <th>Sábado</th>
+                                    <th>Domingo</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="period-label">Manhã</td>
+                                    <td class="schedule-cell club">Clube</td>
+                                    <td class="schedule-cell home">Estabilidade central</td>
+                                    <td class="schedule-cell club">Clube</td>
+                                    <td class="schedule-cell home">Recovery</td>
+                                    <td class="schedule-cell club">Clube</td>
+                                    <td class="schedule-cell game">
+                                        <img src="https://upload.wikimedia.org/wikipedia/pt/thumb/c/cc/Chelsea_FC.svg/418px-Chelsea_FC.svg.png?20100902050559"
+                                            alt="Chelsea" class="team-logo">
+                                    </td>
+                                    <td class="schedule-cell home">Controle motor</td>
+                                </tr>
+                                <tr>
+                                    <td class="period-label">Tarde</td>
+                                    <td class="schedule-cell home">Força membros inferiores</td>
+                                    <td class="schedule-cell club">Clube</td>
+                                    <td class="schedule-cell home">Isométrico</td>
+                                    <td class="schedule-cell club">Clube</td>
+                                    <td class="schedule-cell home">Complexo tornozelo pé</td>
+                                    <td class="schedule-cell game">
+                                        <img src="https://upload.wikimedia.org/wikipedia/pt/thumb/c/cc/Chelsea_FC.svg/418px-Chelsea_FC.svg.png?20100902050559"
+                                            alt="Chelsea" class="team-logo">
+                                    </td>
+                                    <td class="schedule-cell rest">Descanso</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Training Session Details -->
+                <div class="session-section">
+                    <h3 class="session-title">Detalhes da Sessão</h3>
+                    
+                    <!-- Session Info Header -->
+                    <div class="session-info-header">
+                        <div class="session-info-item">
+                            <span class="session-info-label">Tipo:</span>
+                            <span class="session-info-value">Core Stability</span>
+                        </div>
+                        <div class="session-info-item">
+                            <span class="session-info-label">Data:</span>
+                            <span class="session-info-value">18/07/2025</span>
+                        </div>
+                        <div class="session-info-item">
+                            <span class="session-info-label">Sessão:</span>
+                            <span class="session-info-value">#58</span>
+                        </div>
+                    </div>
+                    
+                    <div class="session-content">
+                        <!-- Exercise Table -->
+                        <div class="exercise-table-container">
+                            <table class="exercise-table">
+                                <thead>
+                                    <tr>
+                                        <th>Exercício</th>
+                                        <th>Notas</th>
+                                        <th>Séries</th>
+                                        <th>Repetições</th>
+                                        <th>Carga Total</th>
+                                        <th>Descanso</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Agachamento</td>
+                                        <td>Foco na explosão</td>
+                                        <td>3</td>
+                                        <td>8</td>
+                                        <td>120kg</td>
+                                        <td>90s</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Supino</td>
+                                        <td>Controle excêntrico</td>
+                                        <td>3</td>
+                                        <td>6</td>
+                                        <td>80kg</td>
+                                        <td>120s</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Levantamento Terra</td>
+                                        <td>Técnica perfeita</td>
+                                        <td>2</td>
+                                        <td>5</td>
+                                        <td>140kg</td>
+                                        <td>180s</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Salto Vertical</td>
+                                        <td>Máxima potência</td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td>Peso corporal</td>
+                                        <td>60s</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Right Side Content -->
+                        <div class="session-right-content">
+                            <!-- Insights Box -->
+                            <div class="session-insights-box">
+                                <h4>Insights Principais</h4>
+                                <a href="#" class="trends-link" onclick="openTrendsModal(); return false;">Ver análise completa</a>
+                                <ul>
+                                    <li>CMJ 7.4% abaixo do melhor valor</li>
+                                    <li>HRV em declínio (-8.2%)</li>
+                                    <li>Bem-estar deteriorando</li>
+                                    <li>Sono melhorou (+18min)</li>
+                                </ul>
+                            </div>
+
+                            <!-- Exercise Videos -->
+                            <div class="exercise-videos">
+                                <h4>Vídeos dos Exercícios</h4>
+                                <div class="video-placeholder">
+                                    <div class="video-item">
+                                        <div class="video-thumbnail">📹</div>
+                                        <span>Agachamento</span>
+                                    </div>
+                                    <div class="video-item">
+                                        <div class="video-thumbnail">📹</div>
+                                        <span>Supino</span>
+                                    </div>
+                                    <div class="video-item">
+                                        <div class="video-thumbnail">📹</div>
+                                        <span>Levantamento Terra</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Session Controls -->
+                <div class="session-controls">
+                    <div class="session-stats">
+                        <div class="stat-item">
+                            <span class="stat-label">Total de Séries:</span>
+                            <span class="stat-value">12</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Volume de Carga:</span>
+                            <span class="stat-value">2.880kg</span>
+                        </div>
+                    </div>
+                    <div class="session-buttons">
+                        <button class="session-btn start-btn" onclick="startSession()">Iniciar Sessão</button>
+                        <button class="session-btn end-btn" onclick="endSession()">Finalizar Sessão</button>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -3724,6 +4221,21 @@
                     closeAvaliacaoForm();
                 }
             });
+
+            // Session functions
+            function startSession() {
+                alert('Sessão iniciada!');
+            }
+
+            function endSession() {
+                alert('Sessão finalizada!');
+                switchTab('dashboard');
+            }
+
+            function openTrendsModal() {
+                // Show trends content in modal
+                switchTab('trends');
+            }
         </script>
 </body>
 
