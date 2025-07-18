@@ -1256,6 +1256,588 @@
             transform: translate(-50%, -50%);
         }
 
+        /* Trends Tab Styles */
+        .trends-container {
+            padding: 24px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .trends-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .wellness-overview {
+            display: flex;
+            gap: 24px;
+            margin-bottom: 24px;
+        }
+
+        .wellness-total-card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 8px;
+            padding: 24px;
+            min-width: 240px;
+        }
+
+        .wellness-total-label {
+            font-size: 14px;
+            color: #94a3b8;
+            margin-bottom: 8px;
+        }
+
+        .wellness-total-value {
+            font-size: 32px;
+            font-weight: 600;
+            color: #f1f5f9;
+            margin-bottom: 4px;
+        }
+
+        .wellness-total-percentage {
+            font-size: 16px;
+            color: #ef4444;
+            margin-bottom: 8px;
+        }
+
+        .wellness-total-change {
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .wellness-total-change.negative {
+            color: #ef4444;
+        }
+
+        .wellness-total-change.positive {
+            color: #22c55e;
+        }
+
+        .wellness-trend-chart {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 8px;
+            padding: 24px;
+            flex: 1;
+        }
+
+        .wellness-chart-header {
+            margin-bottom: 16px;
+        }
+
+        .chart-title {
+            font-size: 16px;
+            font-weight: 500;
+            color: #f1f5f9;
+        }
+
+        .wellness-line-chart {
+            width: 100%;
+            height: 100px;
+        }
+
+        .wellness-chart-svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .cmj-height-row {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .cmj-graph-row {
+            margin-bottom: 24px;
+        }
+
+        .cmj-height-card {
+            background: #0f172a;
+            border: 1px solid #334155;
+            border-radius: 8px;
+            padding: 20px;
+            flex: 1;
+            text-align: center;
+        }
+
+        .cmj-height-label {
+            font-size: 14px;
+            color: #94a3b8;
+            margin-bottom: 8px;
+        }
+
+        .cmj-height-value {
+            font-size: 28px;
+            font-weight: 600;
+            color: #f1f5f9;
+            margin-bottom: 8px;
+        }
+
+        .cmj-height-date {
+            font-size: 12px;
+            color: #64748b;
+        }
+
+
+        .cmj-graph-title {
+            font-size: 16px;
+            font-weight: 500;
+            color: #f1f5f9;
+            margin-bottom: 16px;
+        }
+
+        .cmj-graph {
+            width: 100%;
+            height: 160px;
+        }
+
+        .cmj-chart-svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .sleep-duration-row,
+        .hrv-rhr-row {
+            display: flex;
+            gap: 24px;
+            margin-bottom: 24px;
+        }
+
+        .sleep-duration-cards,
+        .hrv-rhr-cards {
+            display: flex;
+            gap: 16px;
+            min-width: 300px;
+        }
+
+        .sleep-duration-card,
+        .hrv-rhr-card {
+            background: #0f172a;
+            border: 1px solid #334155;
+            border-radius: 8px;
+            padding: 20px;
+            flex: 1;
+            text-align: center;
+        }
+
+        .sleep-duration-label,
+        .hrv-rhr-label {
+            font-size: 14px;
+            color: #94a3b8;
+            margin-bottom: 8px;
+        }
+
+        .sleep-duration-value,
+        .hrv-rhr-value {
+            font-size: 24px;
+            font-weight: 600;
+            color: #f1f5f9;
+            margin-bottom: 8px;
+        }
+
+        .sleep-duration-change,
+        .hrv-rhr-change {
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .sleep-duration-graph,
+        .hrv-rhr-graph {
+            flex: 1;
+        }
+
+        .sleep-graph-title,
+        .hrv-rhr-graph-title {
+            font-size: 16px;
+            font-weight: 500;
+            color: #f1f5f9;
+            margin-bottom: 16px;
+        }
+
+        .sleep-graph,
+        .hrv-rhr-chart {
+            width: 100%;
+            height: 160px;
+        }
+
+        .sleep-chart-svg,
+        .hrv-rhr-chart-svg {
+            width: 100%;
+            height: 100%;
+        }
+
+
+        .trend-card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 20px;
+            transition: all 0.2s ease;
+        }
+
+        .trend-card:hover {
+            border-color: #475569;
+        }
+
+        .trend-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #334155;
+        }
+
+        .trend-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #f1f5f9;
+            margin: 0;
+        }
+
+        .trend-period {
+            font-size: 12px;
+            color: #94a3b8;
+            background: #0f172a;
+            padding: 4px 8px;
+            border-radius: 4px;
+        }
+
+        .trend-content {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        /* Chart Styles */
+        .chart-placeholder {
+            background: #0f172a;
+            border-radius: 8px;
+            padding: 16px;
+            height: 160px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .chart-bars {
+            display: flex;
+            align-items: end;
+            justify-content: space-between;
+            height: 100px;
+            gap: 8px;
+        }
+
+        .chart-bar {
+            background: #0891b2;
+            border-radius: 4px 4px 0 0;
+            flex: 1;
+            min-height: 20px;
+            transition: background 0.2s ease;
+        }
+
+        .chart-bar:hover {
+            background: #0e7490;
+        }
+
+        /* Training Load Legend */
+        .training-load-legend {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 12px;
+            justify-content: center;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 12px;
+            color: #e2e8f0;
+        }
+
+        .legend-color {
+            width: 12px;
+            height: 12px;
+            border-radius: 2px;
+        }
+
+        .legend-color.team-load {
+            background: #0891b2;
+        }
+
+        .legend-color.home-load {
+            background: #8b5cf6;
+        }
+
+
+        /* Stacked Chart */
+        .stacked-chart-bars {
+            display: flex;
+            align-items: end;
+            justify-content: space-between;
+            height: 100px;
+            gap: 8px;
+        }
+
+        .stacked-bar {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            border-radius: 4px;
+            overflow: hidden;
+            min-height: 20px;
+            transition: opacity 0.2s ease;
+            opacity: 0.9;
+        }
+
+        .stacked-bar:hover {
+            opacity: 1;
+        }
+
+        .bar-segment {
+            width: 100%;
+            transition: all 0.2s ease;
+        }
+
+        .bar-segment.team-load {
+            background: #0891b2;
+        }
+
+        .bar-segment.home-load {
+            background: #8b5cf6;
+        }
+
+        .chart-labels {
+            display: flex;
+            justify-content: space-between;
+            font-size: 11px;
+            color: #94a3b8;
+            margin-top: 8px;
+        }
+
+        /* Line Chart */
+        .line-chart-placeholder {
+            background: #0f172a;
+            border-radius: 8px;
+            padding: 16px;
+            height: 160px;
+        }
+
+        .chart-svg {
+            width: 100%;
+            height: 100px;
+        }
+
+        /* Metrics */
+        .trend-metrics {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .metric-item {
+            background: #0f172a;
+            padding: 12px;
+            border-radius: 6px;
+            flex: 1;
+            min-width: 120px;
+        }
+
+        .metric-label {
+            font-size: 12px;
+            color: #94a3b8;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .metric-value {
+            font-size: 16px;
+            font-weight: 600;
+            color: #f1f5f9;
+        }
+
+        .metric-value.positive {
+            color: #10b981;
+        }
+
+        .metric-value.negative {
+            color: #ef4444;
+        }
+
+        /* Wellness Grid */
+        .wellness-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 12px;
+        }
+
+        .wellness-item {
+            background: #0f172a;
+            padding: 12px;
+            border-radius: 6px;
+            text-align: center;
+        }
+
+        .wellness-label {
+            font-size: 11px;
+            color: #94a3b8;
+            margin-bottom: 6px;
+        }
+
+        .wellness-score {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .wellness-score.good {
+            color: #10b981;
+        }
+
+        .wellness-score.warning {
+            color: #f59e0b;
+        }
+
+        .wellness-score.bad {
+            color: #ef4444;
+        }
+
+        .wellness-trend {
+            font-size: 11px;
+            font-weight: 500;
+        }
+
+        .wellness-trend.positive {
+            color: #10b981;
+        }
+
+        .wellness-trend.negative {
+            color: #ef4444;
+        }
+
+        .wellness-trend.neutral {
+            color: #94a3b8;
+        }
+
+        /* Sleep Metrics */
+        .sleep-metrics {
+            display: flex;
+            gap: 12px;
+        }
+
+        .sleep-metric-card {
+            background: #0f172a;
+            padding: 16px;
+            border-radius: 8px;
+            flex: 1;
+            text-align: center;
+        }
+
+        .sleep-metric-label {
+            font-size: 12px;
+            color: #94a3b8;
+            margin-bottom: 6px;
+        }
+
+        .sleep-metric-value {
+            font-size: 18px;
+            font-weight: 600;
+            color: #f1f5f9;
+            margin-bottom: 4px;
+        }
+
+        .sleep-metric-change {
+            font-size: 11px;
+            font-weight: 500;
+        }
+
+        .sleep-metric-change.positive {
+            color: #10b981;
+        }
+
+        .sleep-metric-change.negative {
+            color: #ef4444;
+        }
+
+        .sleep-chart {
+            margin-top: 8px;
+        }
+
+        .sleep-chart-placeholder {
+            background: #0f172a;
+            border-radius: 8px;
+            padding: 16px;
+            height: 120px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .sleep-bars {
+            display: flex;
+            align-items: end;
+            justify-content: space-between;
+            height: 60px;
+            gap: 6px;
+        }
+
+        .sleep-bar {
+            background: #8b5cf6;
+            border-radius: 3px 3px 0 0;
+            flex: 1;
+            min-height: 15px;
+        }
+
+        /* Insights */
+        .trend-insights {
+            background: #0f172a;
+            border: 1px solid #334155;
+            border-radius: 8px;
+            padding: 16px;
+        }
+
+        .trend-insights h4 {
+            font-size: 14px;
+            font-weight: 600;
+            color: #f1f5f9;
+            margin: 0 0 12px 0;
+        }
+
+        .trend-insights ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .trend-insights li {
+            font-size: 13px;
+            color: #cbd5e1;
+            margin-bottom: 8px;
+            padding-left: 16px;
+            position: relative;
+        }
+
+        .trend-insights li:before {
+            content: '•';
+            color: #0891b2;
+            position: absolute;
+            left: 0;
+        }
+
+        .trend-insights li:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .trends-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
 
         .btn {
             background: #0f172a;
@@ -1571,9 +2153,459 @@
         </div>
 
         <div class="tab-content" id="trends-content">
-            <div class="empty-tab">
-                <h2>Trends</h2>
-                <p>Conteúdo das tendências será implementado aqui.</p>
+            <div class="trends-container">
+                <div class="trends-grid">
+                    <!-- Carga de Treino -->
+                    <div class="trend-card">
+                        <div class="trend-header">
+                            <h3 class="trend-title">Carga de Treino</h3>
+                            <div class="trend-period">Últimos 7 dias</div>
+                        </div>
+                        <div class="trend-content">
+                            <div class="training-load-legend">
+                                <div class="legend-item">
+                                    <div class="legend-color team-load"></div>
+                                    <span>Clube</span>
+                                </div>
+                                <div class="legend-item">
+                                    <div class="legend-color home-load"></div>
+                                    <span>Casa</span>
+                                </div>
+                            </div>
+                            <div class="trend-chart">
+                                <div class="chart-placeholder">
+                                    <div class="stacked-chart-bars">
+                                        <div class="stacked-bar" style="height: 60%;" data-total="420">
+                                            <div class="bar-segment home-load" style="height: 33%;" data-value="140">
+                                            </div>
+                                            <div class="bar-segment team-load" style="height: 67%;" data-value="280">
+                                            </div>
+                                        </div>
+                                        <div class="stacked-bar" style="height: 75%;" data-total="520">
+                                            <div class="bar-segment home-load" style="height: 33%;" data-value="170">
+                                            </div>
+                                            <div class="bar-segment team-load" style="height: 67%;" data-value="350">
+                                            </div>
+                                        </div>
+                                        <div class="stacked-bar" style="height: 45%;" data-total="310">
+                                            <div class="bar-segment home-load" style="height: 32%;" data-value="100">
+                                            </div>
+                                            <div class="bar-segment team-load" style="height: 68%;" data-value="210">
+                                            </div>
+                                        </div>
+                                        <div class="stacked-bar" style="height: 80%;" data-total="580">
+                                            <div class="bar-segment home-load" style="height: 34%;" data-value="200">
+                                            </div>
+                                            <div class="bar-segment team-load" style="height: 66%;" data-value="380">
+                                            </div>
+                                        </div>
+                                        <div class="stacked-bar" style="height: 35%;" data-total="280">
+                                            <div class="bar-segment home-load" style="height: 36%;" data-value="100">
+                                            </div>
+                                            <div class="bar-segment team-load" style="height: 64%;" data-value="180">
+                                            </div>
+                                        </div>
+                                        <div class="stacked-bar" style="height: 40%;" data-total="320">
+                                            <div class="bar-segment home-load" style="height: 31%;" data-value="100">
+                                            </div>
+                                            <div class="bar-segment team-load" style="height: 69%;" data-value="220">
+                                            </div>
+                                        </div>
+                                        <div class="stacked-bar" style="height: 30%;" data-total="240">
+                                            <div class="bar-segment home-load" style="height: 42%;" data-value="100">
+                                            </div>
+                                            <div class="bar-segment team-load" style="height: 58%;" data-value="140">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chart-labels">
+                                        <span>Seg</span><span>Ter</span><span>Qua</span><span>Qui</span><span>Sex</span><span>Sáb</span><span>Dom</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="trend-metrics">
+                                <div class="metric-item">
+                                    <span class="metric-label">Média Total</span>
+                                    <span class="metric-value">394 AU</span>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-label">Média Clube</span>
+                                    <span class="metric-value">267 AU</span>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-label">Média Casa</span>
+                                    <span class="metric-value">127 AU</span>
+                                </div>
+                            </div>
+                            <div class="trend-insights">
+                                <h4>Insights & Recomendações</h4>
+                                <ul>
+                                    <li>Carga total aumentou 15% comparado à semana anterior</li>
+                                    <li>Volume no clube mantido, acréscimo devido ao treino em casa</li>
+                                    <li>Estamos em MD-2 com carga reduzida nos últimos dias, bom dia para treino
+                                        moderado</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Estado Neuromuscular -->
+                    <div class="trend-card">
+                        <div class="trend-header">
+                            <h3 class="trend-title">Estado Neuromuscular</h3>
+                            <div class="trend-period">CMJ - Últimos 14 dias</div>
+                        </div>
+                        <div class="trend-content">
+                            <!-- Line 1: Height Values -->
+                            <div class="cmj-height-row">
+                                <div class="cmj-height-card">
+                                    <div class="cmj-height-label">Último Valor</div>
+                                    <div class="cmj-height-value">42.3 cm</div>
+                                    <div class="cmj-height-date">16/07/2025 - MD -1</div>
+                                </div>
+                                <div class="cmj-height-card">
+                                    <div class="cmj-height-label">Melhor Valor</div>
+                                    <div class="cmj-height-value">45.7 cm</div>
+                                    <div class="cmj-height-date">28/06/2025 - MD +2</div>
+                                </div>
+                            </div>
+
+                            <!-- Line 2: 4 Weeks Graph -->
+                            <div class="cmj-graph-row">
+                                <div class="cmj-graph-title">Altura CMJ - Últimas 4 semanas</div>
+                                <div class="cmj-graph">
+                                    <svg viewBox="0 0 450 160" class="cmj-chart-svg">
+                                        <!-- Y-axis -->
+                                        <line x1="40" y1="20" x2="40" y2="120" stroke="#64748b" stroke-width="1" />
+                                        <!-- X-axis -->
+                                        <line x1="40" y1="120" x2="420" y2="120" stroke="#64748b" stroke-width="1" />
+
+                                        <!-- Y-axis labels -->
+                                        <text x="35" y="25" text-anchor="end" fill="#94a3b8" font-size="10">50</text>
+                                        <text x="35" y="45" text-anchor="end" fill="#94a3b8" font-size="10">45</text>
+                                        <text x="35" y="65" text-anchor="end" fill="#94a3b8" font-size="10">40</text>
+                                        <text x="35" y="85" text-anchor="end" fill="#94a3b8" font-size="10">35</text>
+                                        <text x="35" y="105" text-anchor="end" fill="#94a3b8" font-size="10">30</text>
+                                        <text x="35" y="125" text-anchor="end" fill="#94a3b8" font-size="10">25</text>
+
+
+                                        <!-- Normal range shade (centered) -->
+                                        <rect x="40" y="45" width="380" height="30" fill="#22c55e" opacity="0.1" />
+                                        <rect x="40" y="45" width="380" height="2" fill="#22c55e" opacity="0.3" />
+                                        <rect x="40" y="73" width="380" height="2" fill="#22c55e" opacity="0.3" />
+
+                                        <!-- CMJ line -->
+                                        <polyline
+                                            points="50,65 70,62 90,58 110,64 130,60 150,55 170,58 190,62 210,59 230,56 250,60 270,64 290,61 310,58 330,62 350,65 370,63 390,60 395,57 400,54 405,51 410,48 415,25"
+                                            fill="none" stroke="#3b82f6" stroke-width="2" />
+
+                                        <!-- Data points -->
+                                        <circle cx="415" cy="25" r="3" fill="#3b82f6" />
+                                        <circle cx="410" cy="48" r="2" fill="#3b82f6" opacity="0.7" />
+                                        <circle cx="405" cy="51" r="2" fill="#3b82f6" opacity="0.7" />
+
+                                        <!-- Grid lines -->
+                                        <defs>
+                                            <pattern id="gridPattern" width="40" height="20"
+                                                patternUnits="userSpaceOnUse">
+                                                <path d="M 40 0 L 0 0 0 20" fill="none" stroke="#334155"
+                                                    stroke-width="0.5" opacity="0.3" />
+                                            </pattern>
+                                        </defs>
+                                        <rect x="40" y="20" width="380" height="100" fill="url(#gridPattern)" />
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <!-- Line 3: 12 Weeks Graph -->
+                            <div class="cmj-graph-row">
+                                <div class="cmj-graph-title">Altura CMJ - Últimas 12 semanas</div>
+                                <div class="cmj-graph">
+                                    <svg viewBox="0 0 450 160" class="cmj-chart-svg">
+                                        <!-- Y-axis -->
+                                        <line x1="40" y1="20" x2="40" y2="120" stroke="#64748b" stroke-width="1" />
+                                        <!-- X-axis -->
+                                        <line x1="40" y1="120" x2="420" y2="120" stroke="#64748b" stroke-width="1" />
+
+                                        <!-- Y-axis labels -->
+                                        <text x="35" y="25" text-anchor="end" fill="#94a3b8" font-size="10">50</text>
+                                        <text x="35" y="45" text-anchor="end" fill="#94a3b8" font-size="10">45</text>
+                                        <text x="35" y="65" text-anchor="end" fill="#94a3b8" font-size="10">40</text>
+                                        <text x="35" y="85" text-anchor="end" fill="#94a3b8" font-size="10">35</text>
+                                        <text x="35" y="105" text-anchor="end" fill="#94a3b8" font-size="10">30</text>
+                                        <text x="35" y="125" text-anchor="end" fill="#94a3b8" font-size="10">25</text>
+
+
+                                        <!-- Normal range shade (centered) -->
+                                        <rect x="40" y="45" width="380" height="30" fill="#22c55e" opacity="0.1" />
+                                        <rect x="40" y="45" width="380" height="2" fill="#22c55e" opacity="0.3" />
+                                        <rect x="40" y="73" width="380" height="2" fill="#22c55e" opacity="0.3" />
+
+                                        <!-- CMJ line -->
+                                        <polyline
+                                            points="50,85 80,82 110,78 140,75 170,72 200,38 230,35 260,32 290,35 320,38 350,42 380,45 390,57 395,54 400,51 405,48 410,48 415,25"
+                                            fill="none" stroke="#3b82f6" stroke-width="2" />
+
+                                        <!-- Data points -->
+                                        <circle cx="415" cy="25" r="3" fill="#3b82f6" />
+                                        <circle cx="410" cy="48" r="2" fill="#3b82f6" opacity="0.7" />
+                                        <circle cx="405" cy="51" r="2" fill="#3b82f6" opacity="0.7" />
+
+                                        <!-- Grid lines -->
+                                        <defs>
+                                            <pattern id="gridPattern12w" width="40" height="20"
+                                                patternUnits="userSpaceOnUse">
+                                                <path d="M 40 0 L 0 0 0 20" fill="none" stroke="#334155"
+                                                    stroke-width="0.5" opacity="0.3" />
+                                            </pattern>
+                                        </defs>
+                                        <rect x="40" y="20" width="380" height="100" fill="url(#gridPattern12w)" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="trend-insights">
+                                <h4>Insights & Recomendações</h4>
+                                <ul>
+                                    <li>Capacidade de salto melhorou 10% nos últimos 12 semanas</li>
+                                    <li>Queda antes de subida, verificar se houve algum problema com o atleta</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Questionário de Bem-estar -->
+                    <div class="trend-card">
+                        <div class="trend-header">
+                            <h3 class="trend-title">Questionário de Bem-estar</h3>
+                            <div class="trend-period">Bem-estar - Últimos 7 dias</div>
+                        </div>
+                        <div class="trend-content">
+                            <div class="wellness-overview">
+                                <div class="wellness-total-card">
+                                    <div class="wellness-total-label">Score Total Atual</div>
+                                    <div class="wellness-total-value">18.7/25</div>
+                                    <div class="wellness-total-percentage">74.8%</div>
+                                    <div class="wellness-total-change negative">↗ +1.2</div>
+                                </div>
+                                <div class="wellness-trend-chart">
+                                    <div class="wellness-chart-header">
+                                        <span class="chart-title">Evolução - Últimas 4 semanas</span>
+                                    </div>
+                                    <div class="wellness-line-chart">
+                                        <svg viewBox="0 0 280 80" class="wellness-chart-svg">
+                                            <!-- Grid lines (optional) -->
+                                            <defs>
+                                                <pattern id="grid" width="20" height="10" patternUnits="userSpaceOnUse">
+                                                    <path d="M 20 0 L 0 0 0 10" fill="none" stroke="#334155"
+                                                        stroke-width="0.5" opacity="0.3" />
+                                                </pattern>
+                                            </defs>
+                                            <rect width="280" height="80" fill="url(#grid)" />
+
+                                            <!-- Wellness trend line -->
+                                            <polyline
+                                                points="10,45 20,42 30,38 40,44 50,40 60,35 70,38 80,42 90,39 100,36 110,40 120,44 130,41 140,38 150,42 160,45 170,43 180,40 190,37 200,41 210,44 220,42 230,35 240,32 250,28 260,25 270,22"
+                                                fill="none" stroke="#ef4444" stroke-width="2" />
+
+                                            <!-- Data points -->
+                                            <circle cx="270" cy="22" r="3" fill="#ef4444" />
+                                            <circle cx="260" cy="25" r="2" fill="#ef4444" opacity="0.7" />
+                                            <circle cx="250" cy="28" r="2" fill="#ef4444" opacity="0.7" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="wellness-grid">
+                                <div class="wellness-item">
+                                    <div class="wellness-label">Qualidade do Sono</div>
+                                    <div class="wellness-score warning">4.2/5</div>
+                                    <div class="wellness-trend neutral">→ 0.0</div>
+                                </div>
+                                <div class="wellness-item">
+                                    <div class="wellness-label">Fadiga</div>
+                                    <div class="wellness-score good">2.8/5</div>
+                                    <div class="wellness-trend positive">↘ -0.5</div>
+                                </div>
+                                <div class="wellness-item">
+                                    <div class="wellness-label">Dor Muscular</div>
+                                    <div class="wellness-score warning">4.1/5</div>
+                                    <div class="wellness-trend negative">↗ +0.3</div>
+                                </div>
+                                <div class="wellness-item">
+                                    <div class="wellness-label">Dor Articular</div>
+                                    <div class="wellness-score warning">4.5/5</div>
+                                    <div class="wellness-trend negative">↗ +0.2</div>
+                                </div>
+                                <div class="wellness-item">
+                                    <div class="wellness-label">Estresse</div>
+                                    <div class="wellness-score good">3.1/5</div>
+                                    <div class="wellness-trend positive">↘ -0.4</div>
+                                </div>
+                            </div>
+                            <div class="trend-insights">
+                                <h4>Insights & Recomendações</h4>
+                                <ul>
+                                    <li>Bem-estar em queda, necessita atenção</li>
+                                    <li>Destaque para índices de dor, fale com médico</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dados de Sono -->
+                    <div class="trend-card">
+                        <div class="trend-header">
+                            <h3 class="trend-title">Dados de Sono</h3>
+                            <div class="trend-period">Dados de sono - Últimos 7 dias</div>
+                        </div>
+                        <div class="trend-content">
+                            <!-- Line 1: Sleep Duration -->
+                            <div class="sleep-duration-row">
+                                <div class="sleep-duration-cards">
+                                    <div class="sleep-duration-card">
+                                        <div class="sleep-duration-label">Sono Ontem</div>
+                                        <div class="sleep-duration-value">7h 43</div>
+                                        <div class="sleep-duration-change positive">+18min</div>
+                                    </div>
+                                    <div class="sleep-duration-card">
+                                        <div class="sleep-duration-label">Média Semanal</div>
+                                        <div class="sleep-duration-value">7h 31</div>
+                                        <div class="sleep-duration-change positive">+12min</div>
+                                    </div>
+                                </div>
+                                <div class="sleep-duration-graph">
+                                    <div class="sleep-graph-title">Sono Total - Últimas 4 semanas</div>
+                                    <div class="sleep-graph">
+                                        <svg viewBox="0 0 450 160" class="sleep-chart-svg">
+                                            <!-- Y-axis -->
+                                            <line x1="40" y1="20" x2="40" y2="120" stroke="#64748b" stroke-width="1" />
+                                            <!-- X-axis -->
+                                            <line x1="40" y1="120" x2="420" y2="120" stroke="#64748b"
+                                                stroke-width="1" />
+
+                                            <!-- Y-axis labels -->
+                                            <text x="35" y="25" text-anchor="end" fill="#94a3b8"
+                                                font-size="10">10h</text>
+                                            <text x="35" y="45" text-anchor="end" fill="#94a3b8"
+                                                font-size="10">8h</text>
+                                            <text x="35" y="65" text-anchor="end" fill="#94a3b8"
+                                                font-size="10">6h</text>
+                                            <text x="35" y="85" text-anchor="end" fill="#94a3b8"
+                                                font-size="10">4h</text>
+                                            <text x="35" y="105" text-anchor="end" fill="#94a3b8"
+                                                font-size="10">2h</text>
+                                            <text x="35" y="125" text-anchor="end" fill="#94a3b8"
+                                                font-size="10">0h</text>
+
+                                            <!-- Sleep duration line -->
+                                            <polyline
+                                                points="50,65 70,62 90,68 110,64 130,60 150,58 170,62 190,65 210,59 230,56 250,60 270,64 290,61 310,58 330,62 350,65 370,63 390,60 395,57 400,54 405,51 410,48 415,45"
+                                                fill="none" stroke="#8b5cf6" stroke-width="2" />
+
+                                            <!-- Data points -->
+                                            <circle cx="415" cy="45" r="3" fill="#8b5cf6" />
+                                            <circle cx="410" cy="48" r="2" fill="#8b5cf6" opacity="0.7" />
+                                            <circle cx="405" cy="51" r="2" fill="#8b5cf6" opacity="0.7" />
+
+                                            <!-- Grid lines -->
+                                            <defs>
+                                                <pattern id="sleepGridPattern" width="40" height="20"
+                                                    patternUnits="userSpaceOnUse">
+                                                    <path d="M 40 0 L 0 0 0 20" fill="none" stroke="#334155"
+                                                        stroke-width="0.5" opacity="0.3" />
+                                                </pattern>
+                                            </defs>
+                                            <rect x="40" y="20" width="380" height="100"
+                                                fill="url(#sleepGridPattern)" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Line 2: HRV/RHR -->
+                            <div class="hrv-rhr-row">
+                                <div class="hrv-rhr-cards">
+                                    <div class="hrv-rhr-card">
+                                        <div class="hrv-rhr-label">HRV</div>
+                                        <div class="hrv-rhr-value">89 ms</div>
+                                        <div class="hrv-rhr-change negative">-8.2%</div>
+                                    </div>
+                                    <div class="hrv-rhr-card">
+                                        <div class="hrv-rhr-label">RHR</div>
+                                        <div class="hrv-rhr-value">52 bpm</div>
+                                        <div class="hrv-rhr-change positive">-3 bpm</div>
+                                    </div>
+                                </div>
+                                <div class="hrv-rhr-graph">
+                                    <div class="hrv-rhr-graph-title">HRV & RHR - Últimas 4 semanas</div>
+                                    <div class="hrv-rhr-chart">
+                                        <svg viewBox="0 0 450 160" class="hrv-rhr-chart-svg">
+                                            <!-- Y-axis -->
+                                            <line x1="40" y1="20" x2="40" y2="120" stroke="#64748b" stroke-width="1" />
+                                            <!-- X-axis -->
+                                            <line x1="40" y1="120" x2="420" y2="120" stroke="#64748b"
+                                                stroke-width="1" />
+
+                                            <!-- Y-axis labels -->
+                                            <text x="35" y="25" text-anchor="end" fill="#94a3b8"
+                                                font-size="10">100</text>
+                                            <text x="35" y="45" text-anchor="end" fill="#94a3b8"
+                                                font-size="10">80</text>
+                                            <text x="35" y="65" text-anchor="end" fill="#94a3b8"
+                                                font-size="10">60</text>
+                                            <text x="35" y="85" text-anchor="end" fill="#94a3b8"
+                                                font-size="10">40</text>
+                                            <text x="35" y="105" text-anchor="end" fill="#94a3b8"
+                                                font-size="10">20</text>
+                                            <text x="35" y="125" text-anchor="end" fill="#94a3b8"
+                                                font-size="10">0</text>
+
+                                            <!-- HRV line -->
+                                            <polyline
+                                                points="50,45 70,42 90,48 110,44 130,40 150,38 170,42 190,45 210,39 230,36 250,40 270,44 290,41 310,38 330,42 350,45 370,43 390,40 395,37 400,34 405,31 410,28 415,25"
+                                                fill="none" stroke="#10b981" stroke-width="2" />
+
+                                            <!-- RHR line -->
+                                            <polyline
+                                                points="50,85 70,82 90,88 110,84 130,80 150,78 170,82 190,85 210,79 230,76 250,80 270,84 290,81 310,78 330,82 350,85 370,83 390,80 395,77 400,74 405,71 410,68 415,65"
+                                                fill="none" stroke="#f59e0b" stroke-width="2" />
+
+                                            <!-- Data points -->
+                                            <circle cx="415" cy="25" r="3" fill="#10b981" />
+                                            <circle cx="415" cy="65" r="3" fill="#f59e0b" />
+                                            <circle cx="410" cy="28" r="2" fill="#10b981" opacity="0.7" />
+                                            <circle cx="410" cy="68" r="2" fill="#f59e0b" opacity="0.7" />
+
+                                            <!-- Grid lines -->
+                                            <defs>
+                                                <pattern id="hrvRhrGridPattern" width="40" height="20"
+                                                    patternUnits="userSpaceOnUse">
+                                                    <path d="M 40 0 L 0 0 0 20" fill="none" stroke="#334155"
+                                                        stroke-width="0.5" opacity="0.3" />
+                                                </pattern>
+                                            </defs>
+                                            <rect x="40" y="20" width="380" height="100"
+                                                fill="url(#hrvRhrGridPattern)" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="trend-insights">
+                                <h4>Insights & Recomendações</h4>
+                                <ul>
+                                    <li>Duração do sono melhorou: ontem 7h43 vs média semanal 7h31 (+18min)</li>
+                                    <li>HRV em declínio (-8.2%) indica possível fadiga - considere reduzir intensidade
+                                        de treino</li>
+                                    <li>RHR estável em boa faixa (52 bpm, -3 bpm vs baseline)</li>
+                                    <li>Padrão de sono mostra tendência de melhora nas últimas semanas</li>
+                                    <li>Correlação entre HRV baixo e RHR estável sugere recuperação cardíaca adequada
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -1673,7 +2705,8 @@
                 </div>
                 <button class="audio-fill-btn" id="audioFillBtnPre" onclick="toggleAudioFillPre()">
                     <svg class="audio-icon" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2c1.1 0 2 .9 2 2v6c0 1.1-.9 2-2 2s-2-.9-2-2V4c0-1.1.9-2 2-2zm5.3 4.7c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4C17.4 9.4 16.2 10 14.8 10.2V12c0 2.8-2.2 5-5 5s-5-2.2-5-5v-1c0-.6.4-1 1-1s1 .4 1 1v1c0 1.7 1.3 3 3 3s3-1.3 3-3V9.8c-1.4-.2-2.6-.8-3.9-2.1-.4-.4-.4-1 0-1.4.4-.4 1-.4 1.4 0C11.2 7.6 12.6 8 14 8s2.8-.4 3.3-.7z"/>
+                        <path
+                            d="M12 2c1.1 0 2 .9 2 2v6c0 1.1-.9 2-2 2s-2-.9-2-2V4c0-1.1.9-2 2-2zm5.3 4.7c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4C17.4 9.4 16.2 10 14.8 10.2V12c0 2.8-2.2 5-5 5s-5-2.2-5-5v-1c0-.6.4-1 1-1s1 .4 1 1v1c0 1.7 1.3 3 3 3s3-1.3 3-3V9.8c-1.4-.2-2.6-.8-3.9-2.1-.4-.4-.4-1 0-1.4.4-.4 1-.4 1.4 0C11.2 7.6 12.6 8 14 8s2.8-.4 3.3-.7z" />
                     </svg>
                     <span id="audioButtonTextPre">Preencher por áudio</span>
                 </button>
@@ -1681,7 +2714,7 @@
                     <!-- Bem-estar -->
                     <div class="form-section">
                         <h4 class="form-section-title">Bem-estar</h4>
-                        
+
                         <div class="form-group">
                             <label class="form-label">Qualidade do sono</label>
                             <div class="scale-rating" data-field="qualidade-sono">
@@ -1821,15 +2854,18 @@
                             <div class="cmj-trials">
                                 <div class="cmj-trial">
                                     <label class="form-label" for="cmjTrial1">Tentativa 1</label>
-                                    <input type="number" class="form-input" id="cmjTrial1" placeholder="0.00" step="0.01">
+                                    <input type="number" class="form-input" id="cmjTrial1" placeholder="0.00"
+                                        step="0.01">
                                 </div>
                                 <div class="cmj-trial">
                                     <label class="form-label" for="cmjTrial2">Tentativa 2</label>
-                                    <input type="number" class="form-input" id="cmjTrial2" placeholder="0.00" step="0.01">
+                                    <input type="number" class="form-input" id="cmjTrial2" placeholder="0.00"
+                                        step="0.01">
                                 </div>
                                 <div class="cmj-trial">
                                     <label class="form-label" for="cmjTrial3">Tentativa 3</label>
-                                    <input type="number" class="form-input" id="cmjTrial3" placeholder="0.00" step="0.01">
+                                    <input type="number" class="form-input" id="cmjTrial3" placeholder="0.00"
+                                        step="0.01">
                                 </div>
                             </div>
                         </div>
@@ -1864,11 +2900,6 @@
                             <label class="form-label" for="tempoSono">Tempo total de sono (horas)</label>
                             <input type="number" class="form-input" id="tempoSono" placeholder="0.0" step="0.1">
                         </div>
-                    </div>
-
-                    <!-- Cardio -->
-                    <div class="form-section">
-                        <h4 class="form-section-title">Cardio</h4>
                         <div class="form-group">
                             <label class="form-label" for="hrv">HRV</label>
                             <input type="number" class="form-input" id="hrv" placeholder="0">
@@ -1880,8 +2911,10 @@
                     </div>
 
                     <div class="form-actions">
-                        <button type="button" class="form-btn form-btn-secondary" onclick="closeColetaPreForm()">Cancelar</button>
-                        <button type="button" class="form-btn form-btn-primary" onclick="saveColetaPreForm()">Salvar Coleta</button>
+                        <button type="button" class="form-btn form-btn-secondary"
+                            onclick="closeColetaPreForm()">Cancelar</button>
+                        <button type="button" class="form-btn form-btn-primary" onclick="saveColetaPreForm()">Salvar
+                            Coleta</button>
                     </div>
                 </form>
             </div>
@@ -2424,7 +3457,7 @@
                 document.querySelectorAll('#coletaPreModal .scale-rating').forEach(container => {
                     const options = container.querySelectorAll('.scale-option');
                     options.forEach(option => {
-                        option.addEventListener('click', function() {
+                        option.addEventListener('click', function () {
                             // Remove selected class from all options in this container
                             options.forEach(opt => opt.querySelector('.scale-radio').classList.remove('selected'));
                             // Add selected class to clicked option
@@ -2437,7 +3470,7 @@
                 document.querySelectorAll('#coletaPreModal .boolean-toggle').forEach(container => {
                     const options = container.querySelectorAll('.boolean-option');
                     options.forEach(option => {
-                        option.addEventListener('click', function() {
+                        option.addEventListener('click', function () {
                             // Remove selected class from all options in this container
                             options.forEach(opt => opt.querySelector('.boolean-radio').classList.remove('selected'));
                             // Add selected class to clicked option
