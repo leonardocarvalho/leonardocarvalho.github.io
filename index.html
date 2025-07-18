@@ -416,8 +416,8 @@
             text-align: center;
         }
 
-        .metric-label {
-            font-size: 14px;
+        .dashboard-metric-label {
+            font-size: 18px;
             font-weight: 500;
             color: #94a3b8;
             margin-bottom: 12px;
@@ -425,38 +425,59 @@
             letter-spacing: 0.5px;
         }
 
-        .metric-value {
+        .dashboard-metric-value {
             font-size: 32px;
             font-weight: 700;
             margin-bottom: 8px;
         }
 
-        .metric-value.green {
+        .dashboard-metric-value.green {
             color: #10b981;
         }
 
-        .metric-value.yellow {
+        .dashboard-metric-value.yellow {
             color: #f59e0b;
         }
 
-        .metric-value.red {
+        .dashboard-metric-value.red {
             color: #ef4444;
         }
 
-        .metric-change {
+        .dashboard-metric-change {
             font-size: 12px;
             font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
         }
 
-        .metric-change.positive {
+        .dashboard-metric-change.positive {
             color: #10b981;
         }
 
-        .metric-change.negative {
+        .dashboard-metric-change.negative {
             color: #ef4444;
         }
 
-        .metric-change.neutral {
+        .dashboard-metric-change.neutral {
+            color: #94a3b8;
+        }
+
+        .dashboard-metric-arrow {
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .dashboard-metric-change.positive .dashboard-metric-arrow {
+            color: #10b981;
+        }
+
+        .dashboard-metric-change.negative .dashboard-metric-arrow {
+            color: #ef4444;
+        }
+
+        .dashboard-metric-change.neutral .dashboard-metric-arrow {
             color: #94a3b8;
         }
 
@@ -2620,9 +2641,8 @@
                                     acontecendo extra campo, ou se os treinos no clube foram mais intensos e olhe as
                                     métricas
                                     HRV, Fadiga e CMJ.</li>
-                                <li>Hoje é MD+2, seu atleta jogou 92 minutos no ultimo jogo, hidratação, alimentação e
-                                    sono são
-                                    inegociáveis, não deixe de reforçar com seu atleta.</li>
+                                <li>Seu atleta jogou 90 minutos nos últimos 3 jogos, hoje é MD-2, cuidado com o volume
+                                    de carga nas próximas 48hrs.</li>
                             </ul>
                         </div>
                     </div>
@@ -2635,39 +2655,57 @@
 
                     <div class="metrics-grid">
                         <div class="metric-box">
-                            <div class="metric-label">CMJ</div>
-                            <div class="metric-value green">43cm</div>
-                            <div class="metric-change positive">+2.3%</div>
+                            <div class="dashboard-metric-label">CMJ</div>
+                            <div class="dashboard-metric-value green">43cm</div>
+                            <div class="dashboard-metric-change positive">
+                                <span class="dashboard-metric-arrow">↗</span>
+                                <span>+2.3%</span>
+                            </div>
                         </div>
 
                         <div class="metric-box">
-                            <div class="metric-label">HRV</div>
-                            <div class="metric-value yellow">89ms</div>
-                            <div class="metric-change negative">-8.2%</div>
+                            <div class="dashboard-metric-label">HRV</div>
+                            <div class="dashboard-metric-value yellow">89ms</div>
+                            <div class="dashboard-metric-change negative">
+                                <span class="dashboard-metric-arrow">↘</span>
+                                <span>-8.2%</span>
+                            </div>
                         </div>
 
                         <div class="metric-box">
-                            <div class="metric-label">Dor</div>
-                            <div class="metric-value green">3</div>
-                            <div class="metric-change positive">-2</div>
+                            <div class="dashboard-metric-label">Dor</div>
+                            <div class="dashboard-metric-value green">3</div>
+                            <div class="dashboard-metric-change positive">
+                                <span class="dashboard-metric-arrow">↘</span>
+                                <span>-2</span>
+                            </div>
                         </div>
 
                         <div class="metric-box">
-                            <div class="metric-label">Fadiga</div>
-                            <div class="metric-value red">7</div>
-                            <div class="metric-change negative">+3</div>
+                            <div class="dashboard-metric-label">Fadiga</div>
+                            <div class="dashboard-metric-value red">7</div>
+                            <div class="dashboard-metric-change negative">
+                                <span class="dashboard-metric-arrow">↗</span>
+                                <span>+3</span>
+                            </div>
                         </div>
 
                         <div class="metric-box">
-                            <div class="metric-label">Sono</div>
-                            <div class="metric-value green">7h43min</div>
-                            <div class="metric-change positive">+15%</div>
+                            <div class="dashboard-metric-label">Sono</div>
+                            <div class="dashboard-metric-value green">7h43min</div>
+                            <div class="dashboard-metric-change positive">
+                                <span class="dashboard-metric-arrow">↗</span>
+                                <span>+15%</span>
+                            </div>
                         </div>
 
                         <div class="metric-box">
-                            <div class="metric-label">Hámstring Peak Force (D/E)</div>
-                            <div class="metric-value">389N/392N</div>
-                            <div class="metric-change neutral">+10%/-5%</div>
+                            <div class="dashboard-metric-label">Hámstring Peak Force (D/E)</div>
+                            <div class="dashboard-metric-value">389N/392N</div>
+                            <div class="dashboard-metric-change neutral">
+                                <span class="dashboard-metric-arrow">↗↘</span>
+                                <span>+10%/-5%</span>
+                            </div>
                         </div>
                     </div>
                 </div>
